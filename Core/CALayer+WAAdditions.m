@@ -1,6 +1,6 @@
-#import "CALayer+XibConfiguration.h"
+#import "CALayer+WAAdditions.h"
 
-@implementation CALayer (XibConfiguration)
+@implementation CALayer (WAAdditions)
 
 -(void)setBorderUIColor:(UIColor*)color
 {

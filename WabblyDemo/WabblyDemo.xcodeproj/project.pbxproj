@@ -22,8 +22,9 @@
 		9225379218F425E8001AE1B9 /* WAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9225378918F425E8001AE1B9 /* WAAppDelegate.m */; };
 		9225379418F425E8001AE1B9 /* WAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9225378D18F425E8001AE1B9 /* WAViewController.m */; };
 		9225379C18F42602001AE1B9 /* WABaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9225379718F42602001AE1B9 /* WABaseTableViewCell.m */; };
-		9225379D18F42602001AE1B9 /* CALayer+XibConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9225379918F42602001AE1B9 /* CALayer+XibConfiguration.m */; };
+		9225379D18F42602001AE1B9 /* CALayer+WAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9225379918F42602001AE1B9 /* CALayer+WAAdditions.m */; };
 		9225379E18F42602001AE1B9 /* WAUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9225379B18F42602001AE1B9 /* WAUtility.m */; };
+		922537A418F4315A001AE1B9 /* NSMutableArray+WAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 922537A318F4315A001AE1B9 /* NSMutableArray+WAAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +59,13 @@
 		9225378D18F425E8001AE1B9 /* WAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAViewController.m; sourceTree = "<group>"; };
 		9225379618F42602001AE1B9 /* WABaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WABaseTableViewCell.h; sourceTree = "<group>"; };
 		9225379718F42602001AE1B9 /* WABaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WABaseTableViewCell.m; sourceTree = "<group>"; };
-		9225379818F42602001AE1B9 /* CALayer+XibConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+XibConfiguration.h"; sourceTree = "<group>"; };
-		9225379918F42602001AE1B9 /* CALayer+XibConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+XibConfiguration.m"; sourceTree = "<group>"; };
+		9225379818F42602001AE1B9 /* CALayer+WAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+WAAdditions.h"; sourceTree = "<group>"; };
+		9225379918F42602001AE1B9 /* CALayer+WAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+WAAdditions.m"; sourceTree = "<group>"; };
 		9225379A18F42602001AE1B9 /* WAUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAUtility.h; sourceTree = "<group>"; };
 		9225379B18F42602001AE1B9 /* WAUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAUtility.m; sourceTree = "<group>"; };
+		922537A218F4315A001AE1B9 /* NSMutableArray+WAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+WAAdditions.h"; sourceTree = "<group>"; };
+		922537A318F4315A001AE1B9 /* NSMutableArray+WAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+WAAdditions.m"; sourceTree = "<group>"; };
+		922537A518F43780001AE1B9 /* Wabbly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wabbly.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,12 +177,15 @@
 		9225379518F42602001AE1B9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				9225379618F42602001AE1B9 /* WABaseTableViewCell.h */,
-				9225379718F42602001AE1B9 /* WABaseTableViewCell.m */,
-				9225379818F42602001AE1B9 /* CALayer+XibConfiguration.h */,
-				9225379918F42602001AE1B9 /* CALayer+XibConfiguration.m */,
+				922537A518F43780001AE1B9 /* Wabbly.h */,
 				9225379A18F42602001AE1B9 /* WAUtility.h */,
 				9225379B18F42602001AE1B9 /* WAUtility.m */,
+				9225379618F42602001AE1B9 /* WABaseTableViewCell.h */,
+				9225379718F42602001AE1B9 /* WABaseTableViewCell.m */,
+				9225379818F42602001AE1B9 /* CALayer+WAAdditions.h */,
+				9225379918F42602001AE1B9 /* CALayer+WAAdditions.m */,
+				922537A218F4315A001AE1B9 /* NSMutableArray+WAAdditions.h */,
+				922537A318F4315A001AE1B9 /* NSMutableArray+WAAdditions.m */,
 			);
 			name = Core;
 			path = ../Core;
@@ -283,7 +290,8 @@
 			files = (
 				9225379C18F42602001AE1B9 /* WABaseTableViewCell.m in Sources */,
 				9225379418F425E8001AE1B9 /* WAViewController.m in Sources */,
-				9225379D18F42602001AE1B9 /* CALayer+XibConfiguration.m in Sources */,
+				9225379D18F42602001AE1B9 /* CALayer+WAAdditions.m in Sources */,
+				922537A418F4315A001AE1B9 /* NSMutableArray+WAAdditions.m in Sources */,
 				9225379218F425E8001AE1B9 /* WAAppDelegate.m in Sources */,
 				9225379E18F42602001AE1B9 /* WAUtility.m in Sources */,
 				9225379118F425E8001AE1B9 /* main.m in Sources */,

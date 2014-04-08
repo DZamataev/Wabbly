@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Wabbly.h"
 
 @interface WAViewController : UIViewController
 

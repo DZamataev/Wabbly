@@ -1,7 +1,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
 
-@interface CALayer (XibConfiguration)
+@interface CALayer (WAAdditions)
 
 @property (nonatomic, assign) UIColor* borderUIColor;
 @property (nonatomic, assign) UIColor* shadowUIColor;
