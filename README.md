@@ -12,5 +12,5 @@ pod 'Wabbly', :git => 'https://github.com/DZamataev/Wabbly.git', :branch => 'mas
 ```
 ```
 # stable
-pod 'Wabbly', :git => 'https://github.com/DZamataev/Wabbly.git', :tag => 'stable'
+pod 'Wabbly', :git => 'https://github.com/DZamataev/Wabbly.git', :branch => 'release'
 ```
