@@ -23,9 +23,9 @@ Pod::Spec.new do |s|
 
   s.subspec 'Demo' do |s|
     s.requires_arc = true
-    s.source_files = 'WabblyDemo/Source/*'
-    s.resources = 'WabblyDemo/Resources/*'
-    s.preserve_paths = "WabblyDemo/WabblyDemo.xcodeproj", "WabblyDemo/Podfile"
+    s.source_files = 'Demo/WabblyDemo/Source/*'
+    s.resources = 'Demo/WabblyDemo/Resources/*'
+    s.preserve_paths = "Demo/WabblyDemo.xcodeproj", "Demo/Podfile"
     s.dependency 'Wabbly/Core'
   end
 
