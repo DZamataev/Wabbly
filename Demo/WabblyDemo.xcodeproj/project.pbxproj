@@ -21,10 +21,12 @@
 		9225379118F425E8001AE1B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9225378718F425E8001AE1B9 /* main.m */; };
 		9225379218F425E8001AE1B9 /* WAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9225378918F425E8001AE1B9 /* WAAppDelegate.m */; };
 		9225379418F425E8001AE1B9 /* WAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9225378D18F425E8001AE1B9 /* WAViewController.m */; };
-		9225379C18F42602001AE1B9 /* WABaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9225379718F42602001AE1B9 /* WABaseTableViewCell.m */; };
-		9225379D18F42602001AE1B9 /* CALayer+WAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9225379918F42602001AE1B9 /* CALayer+WAAdditions.m */; };
-		9225379E18F42602001AE1B9 /* WAUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9225379B18F42602001AE1B9 /* WAUtility.m */; };
-		922537A418F4315A001AE1B9 /* NSMutableArray+WAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 922537A318F4315A001AE1B9 /* NSMutableArray+WAAdditions.m */; };
+		926CA2E018FC260200CD2C5A /* sample_resource.png in Resources */ = {isa = PBXBuildFile; fileRef = 926CA2D518FC260200CD2C5A /* sample_resource.png */; };
+		926CA2E118FC260200CD2C5A /* CALayer+WAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CA2D818FC260200CD2C5A /* CALayer+WAAdditions.m */; };
+		926CA2E218FC260200CD2C5A /* NSMutableArray+WAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CA2DA18FC260200CD2C5A /* NSMutableArray+WAAdditions.m */; };
+		926CA2E318FC260200CD2C5A /* WABaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CA2DC18FC260200CD2C5A /* WABaseTableViewCell.m */; };
+		926CA2E418FC260200CD2C5A /* WAUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CA2DF18FC260200CD2C5A /* WAUtility.m */; };
+		926CA2E718FC263400CD2C5A /* WAImageAboveTextButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CA2E618FC263400CD2C5A /* WAImageAboveTextButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,15 +59,18 @@
 		9225378B18F425E8001AE1B9 /* WabblyDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WabblyDemo-Prefix.pch"; sourceTree = "<group>"; };
 		9225378C18F425E8001AE1B9 /* WAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAViewController.h; sourceTree = "<group>"; };
 		9225378D18F425E8001AE1B9 /* WAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAViewController.m; sourceTree = "<group>"; };
-		9225379618F42602001AE1B9 /* WABaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WABaseTableViewCell.h; sourceTree = "<group>"; };
-		9225379718F42602001AE1B9 /* WABaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WABaseTableViewCell.m; sourceTree = "<group>"; };
-		9225379818F42602001AE1B9 /* CALayer+WAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+WAAdditions.h"; sourceTree = "<group>"; };
-		9225379918F42602001AE1B9 /* CALayer+WAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+WAAdditions.m"; sourceTree = "<group>"; };
-		9225379A18F42602001AE1B9 /* WAUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAUtility.h; sourceTree = "<group>"; };
-		9225379B18F42602001AE1B9 /* WAUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAUtility.m; sourceTree = "<group>"; };
-		922537A218F4315A001AE1B9 /* NSMutableArray+WAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+WAAdditions.h"; sourceTree = "<group>"; };
-		922537A318F4315A001AE1B9 /* NSMutableArray+WAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+WAAdditions.m"; sourceTree = "<group>"; };
-		922537A518F43780001AE1B9 /* Wabbly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wabbly.h; sourceTree = "<group>"; };
+		926CA2D518FC260200CD2C5A /* sample_resource.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample_resource.png; sourceTree = "<group>"; };
+		926CA2D718FC260200CD2C5A /* CALayer+WAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+WAAdditions.h"; sourceTree = "<group>"; };
+		926CA2D818FC260200CD2C5A /* CALayer+WAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+WAAdditions.m"; sourceTree = "<group>"; };
+		926CA2D918FC260200CD2C5A /* NSMutableArray+WAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+WAAdditions.h"; sourceTree = "<group>"; };
+		926CA2DA18FC260200CD2C5A /* NSMutableArray+WAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+WAAdditions.m"; sourceTree = "<group>"; };
+		926CA2DB18FC260200CD2C5A /* WABaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WABaseTableViewCell.h; sourceTree = "<group>"; };
+		926CA2DC18FC260200CD2C5A /* WABaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WABaseTableViewCell.m; sourceTree = "<group>"; };
+		926CA2DD18FC260200CD2C5A /* Wabbly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wabbly.h; sourceTree = "<group>"; };
+		926CA2DE18FC260200CD2C5A /* WAUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAUtility.h; sourceTree = "<group>"; };
+		926CA2DF18FC260200CD2C5A /* WAUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAUtility.m; sourceTree = "<group>"; };
+		926CA2E518FC263400CD2C5A /* WAImageAboveTextButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAImageAboveTextButton.h; sourceTree = "<group>"; };
+		926CA2E618FC263400CD2C5A /* WAImageAboveTextButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAImageAboveTextButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +100,7 @@
 		9225373E18F424EC001AE1B9 = {
 			isa = PBXGroup;
 			children = (
-				9225379518F42602001AE1B9 /* Core */,
+				926CA2D318FC260200CD2C5A /* Core */,
 				9225377F18F425E8001AE1B9 /* WabblyDemo */,
 				9225376F18F424EC001AE1B9 /* WabblyDemoTests */,
 				9225374918F424EC001AE1B9 /* Frameworks */,
@@ -174,21 +179,40 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		9225379518F42602001AE1B9 /* Core */ = {
+		926CA2D318FC260200CD2C5A /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				922537A518F43780001AE1B9 /* Wabbly.h */,
-				9225379A18F42602001AE1B9 /* WAUtility.h */,
-				9225379B18F42602001AE1B9 /* WAUtility.m */,
-				9225379618F42602001AE1B9 /* WABaseTableViewCell.h */,
-				9225379718F42602001AE1B9 /* WABaseTableViewCell.m */,
-				9225379818F42602001AE1B9 /* CALayer+WAAdditions.h */,
-				9225379918F42602001AE1B9 /* CALayer+WAAdditions.m */,
-				922537A218F4315A001AE1B9 /* NSMutableArray+WAAdditions.h */,
-				922537A318F4315A001AE1B9 /* NSMutableArray+WAAdditions.m */,
+				926CA2D418FC260200CD2C5A /* Resources */,
+				926CA2D618FC260200CD2C5A /* Source */,
 			);
 			name = Core;
 			path = ../Core;
+			sourceTree = "<group>";
+		};
+		926CA2D418FC260200CD2C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				926CA2D518FC260200CD2C5A /* sample_resource.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		926CA2D618FC260200CD2C5A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				926CA2D718FC260200CD2C5A /* CALayer+WAAdditions.h */,
+				926CA2D818FC260200CD2C5A /* CALayer+WAAdditions.m */,
+				926CA2D918FC260200CD2C5A /* NSMutableArray+WAAdditions.h */,
+				926CA2DA18FC260200CD2C5A /* NSMutableArray+WAAdditions.m */,
+				926CA2DB18FC260200CD2C5A /* WABaseTableViewCell.h */,
+				926CA2DC18FC260200CD2C5A /* WABaseTableViewCell.m */,
+				926CA2DD18FC260200CD2C5A /* Wabbly.h */,
+				926CA2DE18FC260200CD2C5A /* WAUtility.h */,
+				926CA2DF18FC260200CD2C5A /* WAUtility.m */,
+				926CA2E518FC263400CD2C5A /* WAImageAboveTextButton.h */,
+				926CA2E618FC263400CD2C5A /* WAImageAboveTextButton.m */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +294,7 @@
 				9225379018F425E8001AE1B9 /* Images.xcassets in Resources */,
 				9225378E18F425E8001AE1B9 /* Main.storyboard in Resources */,
 				9225378F18F425E8001AE1B9 /* InfoPlist.strings in Resources */,
+				926CA2E018FC260200CD2C5A /* sample_resource.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,13 +313,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9225379C18F42602001AE1B9 /* WABaseTableViewCell.m in Sources */,
+				926CA2E318FC260200CD2C5A /* WABaseTableViewCell.m in Sources */,
 				9225379418F425E8001AE1B9 /* WAViewController.m in Sources */,
-				9225379D18F42602001AE1B9 /* CALayer+WAAdditions.m in Sources */,
-				922537A418F4315A001AE1B9 /* NSMutableArray+WAAdditions.m in Sources */,
+				926CA2E418FC260200CD2C5A /* WAUtility.m in Sources */,
 				9225379218F425E8001AE1B9 /* WAAppDelegate.m in Sources */,
-				9225379E18F42602001AE1B9 /* WAUtility.m in Sources */,
+				926CA2E718FC263400CD2C5A /* WAImageAboveTextButton.m in Sources */,
 				9225379118F425E8001AE1B9 /* main.m in Sources */,
+				926CA2E118FC260200CD2C5A /* CALayer+WAAdditions.m in Sources */,
+				926CA2E218FC260200CD2C5A /* NSMutableArray+WAAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
