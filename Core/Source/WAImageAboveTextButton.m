@@ -13,8 +13,6 @@
 }
 
 -(void)layoutSubviews {
-    [super layoutSubviews];
-    
     CGSize imageSize = self.imageView.frame.size;
     CGSize titleSize = self.titleLabel.frame.size;
     
@@ -29,6 +27,7 @@
                                             - imageSize.width,
                                             - (totalHeight - titleSize.height),
                                             0.0f);
+    [super layoutSubviews];
 }
 /*
 // Only override drawRect: if you perform custom drawing.
