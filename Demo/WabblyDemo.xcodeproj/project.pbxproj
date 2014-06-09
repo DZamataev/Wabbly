@@ -27,6 +27,8 @@
 		926CA2E318FC260200CD2C5A /* WABaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CA2DC18FC260200CD2C5A /* WABaseTableViewCell.m */; };
 		926CA2E418FC260200CD2C5A /* WAUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CA2DF18FC260200CD2C5A /* WAUtility.m */; };
 		926CA2E718FC263400CD2C5A /* WAImageAboveTextButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CA2E618FC263400CD2C5A /* WAImageAboveTextButton.m */; };
+		92E02AF21945ED780073D0B7 /* WAGetDirectionsPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E02AF11945ED780073D0B7 /* WAGetDirectionsPicker.m */; };
+		92E02AF61945FF680073D0B7 /* WAGetDirectionsPickerLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92E02AF51945FF680073D0B7 /* WAGetDirectionsPickerLocalizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,10 @@
 		926CA2DF18FC260200CD2C5A /* WAUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAUtility.m; sourceTree = "<group>"; };
 		926CA2E518FC263400CD2C5A /* WAImageAboveTextButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAImageAboveTextButton.h; sourceTree = "<group>"; };
 		926CA2E618FC263400CD2C5A /* WAImageAboveTextButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAImageAboveTextButton.m; sourceTree = "<group>"; };
+		92E02AF01945ED780073D0B7 /* WAGetDirectionsPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAGetDirectionsPicker.h; sourceTree = "<group>"; };
+		92E02AF11945ED780073D0B7 /* WAGetDirectionsPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAGetDirectionsPicker.m; sourceTree = "<group>"; };
+		92E02AF31945EE1E0073D0B7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		92E02AF51945FF680073D0B7 /* WAGetDirectionsPickerLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = WAGetDirectionsPickerLocalizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,7 @@
 		9225374918F424EC001AE1B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92E02AF31945EE1E0073D0B7 /* MapKit.framework */,
 				9225374A18F424EC001AE1B9 /* Foundation.framework */,
 				9225374C18F424EC001AE1B9 /* CoreGraphics.framework */,
 				9225374E18F424EC001AE1B9 /* UIKit.framework */,
@@ -193,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				926CA2D518FC260200CD2C5A /* sample_resource.png */,
+				92E02AF51945FF680073D0B7 /* WAGetDirectionsPickerLocalizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -211,6 +219,8 @@
 				926CA2DF18FC260200CD2C5A /* WAUtility.m */,
 				926CA2E518FC263400CD2C5A /* WAImageAboveTextButton.h */,
 				926CA2E618FC263400CD2C5A /* WAImageAboveTextButton.m */,
+				92E02AF01945ED780073D0B7 /* WAGetDirectionsPicker.h */,
+				92E02AF11945ED780073D0B7 /* WAGetDirectionsPicker.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -294,6 +304,7 @@
 				9225379018F425E8001AE1B9 /* Images.xcassets in Resources */,
 				9225378E18F425E8001AE1B9 /* Main.storyboard in Resources */,
 				9225378F18F425E8001AE1B9 /* InfoPlist.strings in Resources */,
+				92E02AF61945FF680073D0B7 /* WAGetDirectionsPickerLocalizable.strings in Resources */,
 				926CA2E018FC260200CD2C5A /* sample_resource.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +332,7 @@
 				9225379118F425E8001AE1B9 /* main.m in Sources */,
 				926CA2E118FC260200CD2C5A /* CALayer+WAAdditions.m in Sources */,
 				926CA2E218FC260200CD2C5A /* NSMutableArray+WAAdditions.m in Sources */,
+				92E02AF21945ED780073D0B7 /* WAGetDirectionsPicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
