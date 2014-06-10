@@ -19,12 +19,23 @@
         self.endPointCoordinates = CGPointZero;
         self.startPointCoordinates = CGPointZero;
         self.makeARoute = YES;
-        _providers = @[
-                       [NSNumber numberWithInteger:WAGetDirectionsPickerProviderTypeApple],
-                       [NSNumber numberWithInteger:WAGetDirectionsPickerProviderTypeGoogle],
-                       [NSNumber numberWithInteger:WAGetDirectionsPickerProviderTypeYandexNavigator],
-                       [NSNumber numberWithInteger:WAGetDirectionsPickerProviderTypeYandexMaps]
-                       ];
+        
+        NSMutableArray *providersWhichAppCanHandle = [NSMutableArray new];
+        
+        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:[self urlSchemeForProviderType:WAGetDirectionsPickerProviderTypeApple]]]) {
+            [providersWhichAppCanHandle addObject:[NSNumber numberWithInteger:WAGetDirectionsPickerProviderTypeApple]];
+        }
+        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:[self urlSchemeForProviderType:WAGetDirectionsPickerProviderTypeGoogle]]]) {
+            [providersWhichAppCanHandle addObject:[NSNumber numberWithInteger:WAGetDirectionsPickerProviderTypeGoogle]];
+        }
+        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:[self urlSchemeForProviderType:WAGetDirectionsPickerProviderTypeYandexNavigator]]]) {
+            [providersWhichAppCanHandle addObject:[NSNumber numberWithInteger:WAGetDirectionsPickerProviderTypeYandexNavigator]];
+        }
+        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:[self urlSchemeForProviderType:WAGetDirectionsPickerProviderTypeYandexMaps]]]) {
+            [providersWhichAppCanHandle addObject:[NSNumber numberWithInteger:WAGetDirectionsPickerProviderTypeYandexMaps]];
+        }
+        
+        _providers = [NSArray arrayWithArray:providersWhichAppCanHandle];
     }
     return self;
 }
