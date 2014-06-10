@@ -21,14 +21,13 @@
 		9225379118F425E8001AE1B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9225378718F425E8001AE1B9 /* main.m */; };
 		9225379218F425E8001AE1B9 /* WAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9225378918F425E8001AE1B9 /* WAAppDelegate.m */; };
 		9225379418F425E8001AE1B9 /* WAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9225378D18F425E8001AE1B9 /* WAViewController.m */; };
-		926CA2E018FC260200CD2C5A /* sample_resource.png in Resources */ = {isa = PBXBuildFile; fileRef = 926CA2D518FC260200CD2C5A /* sample_resource.png */; };
 		926CA2E118FC260200CD2C5A /* CALayer+WAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CA2D818FC260200CD2C5A /* CALayer+WAAdditions.m */; };
 		926CA2E218FC260200CD2C5A /* NSMutableArray+WAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CA2DA18FC260200CD2C5A /* NSMutableArray+WAAdditions.m */; };
 		926CA2E318FC260200CD2C5A /* WABaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CA2DC18FC260200CD2C5A /* WABaseTableViewCell.m */; };
 		926CA2E418FC260200CD2C5A /* WAUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CA2DF18FC260200CD2C5A /* WAUtility.m */; };
 		926CA2E718FC263400CD2C5A /* WAImageAboveTextButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CA2E618FC263400CD2C5A /* WAImageAboveTextButton.m */; };
+		928B89E1194714E8003E9CE5 /* WAGetDirectionsPickerLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 928B89E3194714E8003E9CE5 /* WAGetDirectionsPickerLocalizable.strings */; };
 		92E02AF21945ED780073D0B7 /* WAGetDirectionsPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E02AF11945ED780073D0B7 /* WAGetDirectionsPicker.m */; };
-		92E02AF61945FF680073D0B7 /* WAGetDirectionsPickerLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92E02AF51945FF680073D0B7 /* WAGetDirectionsPickerLocalizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +60,6 @@
 		9225378B18F425E8001AE1B9 /* WabblyDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WabblyDemo-Prefix.pch"; sourceTree = "<group>"; };
 		9225378C18F425E8001AE1B9 /* WAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAViewController.h; sourceTree = "<group>"; };
 		9225378D18F425E8001AE1B9 /* WAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAViewController.m; sourceTree = "<group>"; };
-		926CA2D518FC260200CD2C5A /* sample_resource.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample_resource.png; sourceTree = "<group>"; };
 		926CA2D718FC260200CD2C5A /* CALayer+WAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+WAAdditions.h"; sourceTree = "<group>"; };
 		926CA2D818FC260200CD2C5A /* CALayer+WAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+WAAdditions.m"; sourceTree = "<group>"; };
 		926CA2D918FC260200CD2C5A /* NSMutableArray+WAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+WAAdditions.h"; sourceTree = "<group>"; };
@@ -73,10 +71,13 @@
 		926CA2DF18FC260200CD2C5A /* WAUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAUtility.m; sourceTree = "<group>"; };
 		926CA2E518FC263400CD2C5A /* WAImageAboveTextButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAImageAboveTextButton.h; sourceTree = "<group>"; };
 		926CA2E618FC263400CD2C5A /* WAImageAboveTextButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAImageAboveTextButton.m; sourceTree = "<group>"; };
+		928B89DF194714D8003E9CE5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		928B89E0194714D8003E9CE5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		928B89E4194714F0003E9CE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/WAGetDirectionsPickerLocalizable.strings; sourceTree = "<group>"; };
+		928B89E51947150B003E9CE5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/WAGetDirectionsPickerLocalizable.strings; sourceTree = "<group>"; };
 		92E02AF01945ED780073D0B7 /* WAGetDirectionsPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAGetDirectionsPicker.h; sourceTree = "<group>"; };
 		92E02AF11945ED780073D0B7 /* WAGetDirectionsPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAGetDirectionsPicker.m; sourceTree = "<group>"; };
 		92E02AF31945EE1E0073D0B7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		92E02AF51945FF680073D0B7 /* WAGetDirectionsPickerLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = WAGetDirectionsPickerLocalizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,8 +200,7 @@
 		926CA2D418FC260200CD2C5A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				926CA2D518FC260200CD2C5A /* sample_resource.png */,
-				92E02AF51945FF680073D0B7 /* WAGetDirectionsPickerLocalizable.strings */,
+				928B89E3194714E8003E9CE5 /* WAGetDirectionsPickerLocalizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -284,6 +284,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 9225373E18F424EC001AE1B9;
 			productRefGroup = 9225374818F424EC001AE1B9 /* Products */;
@@ -304,8 +305,7 @@
 				9225379018F425E8001AE1B9 /* Images.xcassets in Resources */,
 				9225378E18F425E8001AE1B9 /* Main.storyboard in Resources */,
 				9225378F18F425E8001AE1B9 /* InfoPlist.strings in Resources */,
-				92E02AF61945FF680073D0B7 /* WAGetDirectionsPickerLocalizable.strings in Resources */,
-				926CA2E018FC260200CD2C5A /* sample_resource.png in Resources */,
+				928B89E1194714E8003E9CE5 /* WAGetDirectionsPickerLocalizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +359,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9225377318F424EC001AE1B9 /* en */,
+				928B89E0194714D8003E9CE5 /* ru */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -375,8 +376,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				9225378418F425E8001AE1B9 /* en */,
+				928B89DF194714D8003E9CE5 /* ru */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		928B89E3194714E8003E9CE5 /* WAGetDirectionsPickerLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				928B89E4194714F0003E9CE5 /* Base */,
+				928B89E51947150B003E9CE5 /* ru */,
+			);
+			name = WAGetDirectionsPickerLocalizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

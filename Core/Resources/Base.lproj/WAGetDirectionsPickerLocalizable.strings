@@ -1,0 +1,12 @@
+/* 
+  WAGetDirectionsPickerLocalizable.strings
+  WabblyDemo
+
+  Created by Denis Zamataev on 6/9/14.
+
+*/
+"Choose application to get directions" = "Choose application to get directions";
+"Apple Maps" = "Apple Maps";
+"Google Maps" = "Google Maps";
+"Yandex Navigator" = "Yandex Navigator";
+"Yandex Maps" = "Yandex Maps";

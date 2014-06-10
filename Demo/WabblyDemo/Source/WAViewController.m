@@ -29,9 +29,8 @@
 - (IBAction)pickGetDirectionsProviderAction:(id)sender {
     // should be retained
     self.getDirectionsPicker = [WAGetDirectionsPicker new];
-    self.getDirectionsPicker.title = @"Москва";
-    self.getDirectionsPicker.startPointCoordinates = CGPointMake(51,30);
-    self.getDirectionsPicker.endPointCoordinates = CGPointMake(50.0, 30.0);
+    self.getDirectionsPicker.startPointCoordinates = CGPointMake(55.751667,37.617778);
+    self.getDirectionsPicker.endPointCoordinates = CGPointMake(55.819722, 37.611667);
     [self.getDirectionsPicker showInView:self.view];
 }
 @end

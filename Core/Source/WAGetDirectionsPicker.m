@@ -8,27 +8,9 @@
 
 #import "WAGetDirectionsPicker.h"
 
-typedef enum {WAGetDirectionsPickerProviderTypeApple, WAGetDirectionsPickerProviderTypeGoogle, WAGetDirectionsPickerProviderTypeYandex} WAGetDirectionsPickerProviderType;
-
 @implementation WAGetDirectionsPicker {
-    NSDictionary *_buttonTitles;
+    NSArray *_providers;
 }
-//- (void)openMapsWithPoint:(CLLocationCoordinate2D)coord andTitle:(NSString *)title makeARoute:(BOOL)makeARoute{
-//    
-//    MKPlacemark* place = [[MKPlacemark alloc] initWithCoordinate:coord addressDictionary: nil];
-//    
-//    MKMapItem* destination = [[MKMapItem alloc] initWithPlacemark: place];
-//    destination.name = title;
-//    
-//    
-//    NSArray* items = [[NSArray alloc] initWithObjects: destination, nil];
-//    NSDictionary* options = [[NSDictionary alloc] initWithObjectsAndKeys:
-//                             MKLaunchOptionsDirectionsModeDriving,
-//                             MKLaunchOptionsDirectionsModeKey,
-//                             nil];
-//    [MKMapItem openMapsWithItems: items launchOptions: options];
-//    
-//}
 
 - (instancetype)init
 {
@@ -37,30 +19,32 @@ typedef enum {WAGetDirectionsPickerProviderTypeApple, WAGetDirectionsPickerProvi
         self.endPointCoordinates = CGPointZero;
         self.startPointCoordinates = CGPointZero;
         self.makeARoute = YES;
+        _providers = @[
+                       [NSNumber numberWithInteger:WAGetDirectionsPickerProviderTypeApple],
+                       [NSNumber numberWithInteger:WAGetDirectionsPickerProviderTypeGoogle],
+                       [NSNumber numberWithInteger:WAGetDirectionsPickerProviderTypeYandexNavigator],
+                       [NSNumber numberWithInteger:WAGetDirectionsPickerProviderTypeYandexMaps]
+                       ];
     }
     return self;
 }
 
 - (void)showInView:(UIView*)view
 {
-    self.actionSheet = [[UIActionSheet alloc] initWithTitle:@"Choose application to get directions"
+    self.actionSheet = [[UIActionSheet alloc] initWithTitle:NSLocalizedStringFromTable(@"Choose application to get directions", @"WAGetDirectionsPickerLocalizable", nil)
                                                              delegate:self
                                                     cancelButtonTitle:nil
                                                destructiveButtonTitle:nil
                                                     otherButtonTitles:nil];
-    for (id titleKey in [[self buttonTitles] allKeys]) {
-        
-        NSNumber *numberForTitleKey = [[self buttonTitles] objectForKey:titleKey];
-        if (numberForTitleKey) {
-            WAGetDirectionsPickerProviderType providerType = (WAGetDirectionsPickerProviderType)[numberForTitleKey integerValue];
-            NSString *urlScheme = [self urlSchemeForProviderType:providerType];
-            if (urlScheme) {
-                if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:urlScheme]]) {
-                    [self.actionSheet addButtonWithTitle:NSLocalizedStringFromTable(titleKey, @"WAGetDirectionsPickerLocalizable", nil)];
-                }
-            }
+    for (NSNumber *num in _providers) {
+        WAGetDirectionsPickerProviderType providerType = (WAGetDirectionsPickerProviderType)[num integerValue];
+        NSString *keyName = [self keyNameForProviderType:providerType];
+        NSString *urlScheme = [self urlSchemeForProviderType:providerType];
+        NSString *localizedTitle = NSLocalizedStringFromTable(keyName, @"WAGetDirectionsPickerLocalizable", nil);
+        NSURL *urlFromScheme = [NSURL URLWithString:urlScheme];
+        if ([[UIApplication sharedApplication] canOpenURL:urlFromScheme]) {
+            [self.actionSheet addButtonWithTitle:localizedTitle];
         }
-        
     }
     
     NSString *cancelButtonTitle = @"Cancel";
@@ -82,8 +66,12 @@ typedef enum {WAGetDirectionsPickerProviderTypeApple, WAGetDirectionsPickerProvi
             result = @"comgooglemaps://";
             break;
             
-        case WAGetDirectionsPickerProviderTypeYandex:
+        case WAGetDirectionsPickerProviderTypeYandexNavigator:
             result = @"yandexnavi://";
+            break;
+            
+        case WAGetDirectionsPickerProviderTypeYandexMaps:
+            result = @"yandexmaps://";
             break;
             
         default:
@@ -92,27 +80,31 @@ typedef enum {WAGetDirectionsPickerProviderTypeApple, WAGetDirectionsPickerProvi
     return result;
 }
 
-- (NSDictionary*)buttonTitles {
-    if (!_buttonTitles) {
-        _buttonTitles = @{
-                          @"Apple Maps": [NSNumber numberWithInteger:WAGetDirectionsPickerProviderTypeApple],
-                          @"Google Maps": [NSNumber numberWithInteger:WAGetDirectionsPickerProviderTypeGoogle],
-                          @"Yandex Navigator": [NSNumber numberWithInteger:WAGetDirectionsPickerProviderTypeYandex]
-                          };
-    }
-    return _buttonTitles;
-}
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+- (NSString*)keyNameForProviderType:(WAGetDirectionsPickerProviderType)providerType
 {
-    if (buttonIndex != actionSheet.cancelButtonIndex) {
-        NSString *titleKey = [actionSheet buttonTitleAtIndex:buttonIndex];
-        NSNumber *numberForTitleKey = [[self buttonTitles] objectForKey:titleKey];
-        if (numberForTitleKey) {
-            WAGetDirectionsPickerProviderType providerType = (WAGetDirectionsPickerProviderType)[numberForTitleKey integerValue];
-            [self getDirectionsFromProviderWithType:providerType];
-        }
+    NSString *result = nil;
+    switch (providerType) {
+        case WAGetDirectionsPickerProviderTypeApple:
+            result = @"Apple Maps";
+            break;
+            
+        case WAGetDirectionsPickerProviderTypeGoogle:
+            result = @"Google Maps";
+            break;
+            
+        case WAGetDirectionsPickerProviderTypeYandexNavigator:
+            result = @"Yandex Navigator";
+            break;
+            
+        case WAGetDirectionsPickerProviderTypeYandexMaps:
+            result = @"Yandex Maps";
+            break;
+            
+        default:
+            break;
     }
+    return result;
 }
 
 - (void)getDirectionsFromProviderWithType:(WAGetDirectionsPickerProviderType)providerType
@@ -126,7 +118,11 @@ typedef enum {WAGetDirectionsPickerProviderTypeApple, WAGetDirectionsPickerProvi
             [self showGoogleMaps];
         break;
         
-        case WAGetDirectionsPickerProviderTypeYandex:
+        case WAGetDirectionsPickerProviderTypeYandexNavigator:
+            [self showYandexNavigator];
+        break;
+            
+        case WAGetDirectionsPickerProviderTypeYandexMaps:
             [self showYandexMaps];
         break;
 
@@ -151,15 +147,15 @@ typedef enum {WAGetDirectionsPickerProviderTypeApple, WAGetDirectionsPickerProvi
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlStr]];
 }
 
-- (void)showYandexMaps
+- (void)showYandexNavigator
 {
-    NSMutableString *urlStr = [[NSMutableString alloc] initWithString:[self urlSchemeForProviderType:WAGetDirectionsPickerProviderTypeYandex]];
+    NSMutableString *urlStr = [[NSMutableString alloc] initWithString:[self urlSchemeForProviderType:WAGetDirectionsPickerProviderTypeYandexNavigator]];
     [urlStr appendString:@"build_route_on_map?"];
     if (!CGPointEqualToPoint(self.startPointCoordinates, CGPointZero)) {
-        [urlStr appendString:[NSString stringWithFormat:@"lat_from=%f&lon_from=%f&",self.startPointCoordinates.x, self.startPointCoordinates.y]];
+        [urlStr appendFormat:@"lat_from=%f&lon_from=%f&",self.startPointCoordinates.x, self.startPointCoordinates.y];
     }
     if (!CGPointEqualToPoint(self.endPointCoordinates, CGPointZero)) {
-        [urlStr appendString:[NSString stringWithFormat:@"lat_to=%f&lon_to=%f&",self.endPointCoordinates.x, self.endPointCoordinates.y]];
+        [urlStr appendFormat:@"lat_to=%f&lon_to=%f&",self.endPointCoordinates.x, self.endPointCoordinates.y];
     }
     if ([[urlStr substringFromIndex:urlStr.length-1] isEqualToString:@"&"]) {
         [urlStr replaceCharactersInRange:NSMakeRange(urlStr.length-1, 1) withString:@""];
@@ -167,16 +163,38 @@ typedef enum {WAGetDirectionsPickerProviderTypeApple, WAGetDirectionsPickerProvi
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlStr]];
 }
 
+- (void)showYandexMaps
+{
+    NSMutableString *urlStr = [[NSMutableString alloc] initWithString:[self urlSchemeForProviderType:WAGetDirectionsPickerProviderTypeYandexMaps]];
+    [urlStr appendString:@"maps.yandex.ru/?"];
+    if (!CGPointEqualToPoint(self.endPointCoordinates, CGPointZero)) {
+        [urlStr appendFormat:@"ll=%f,%f&z=12&l=map&pt=%f,%f", self.endPointCoordinates.y, self.endPointCoordinates.x, self.endPointCoordinates.y, self.endPointCoordinates.x];
+    }
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlStr]];
+}
+
 - (void)appendStandardParametersToString:(NSMutableString*)urlStr
 {
     if (!CGPointEqualToPoint(self.startPointCoordinates, CGPointZero)) {
-        [urlStr appendString:[NSString stringWithFormat:@"saddr=%f,%f&", self.startPointCoordinates.x, self.startPointCoordinates.y]];
+        [urlStr appendFormat:@"saddr=%f,%f&", self.startPointCoordinates.x, self.startPointCoordinates.y];
     }
     if (!CGPointEqualToPoint(self.endPointCoordinates, CGPointZero)) {
-        [urlStr appendString:[NSString stringWithFormat:@"daddr=%f,%f&", self.endPointCoordinates.x, self.endPointCoordinates.y]];
+        [urlStr appendFormat:@"daddr=%f,%f&", self.endPointCoordinates.x, self.endPointCoordinates.y];
     }
     if ([[urlStr substringFromIndex:urlStr.length-1] isEqualToString:@"&"]) {
         [urlStr replaceCharactersInRange:NSMakeRange(urlStr.length-1, 1) withString:@""];
+    }
+}
+
+
+#pragma mark - UIActionSheetDelegate protocol implementation
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex != actionSheet.cancelButtonIndex) {
+        NSNumber *num = _providers[buttonIndex];
+        WAGetDirectionsPickerProviderType providerType = (WAGetDirectionsPickerProviderType)[num integerValue];
+        [self getDirectionsFromProviderWithType:providerType];
     }
 }
 
