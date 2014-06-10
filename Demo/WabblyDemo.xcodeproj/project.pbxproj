@@ -27,6 +27,7 @@
 		926CA2E418FC260200CD2C5A /* WAUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CA2DF18FC260200CD2C5A /* WAUtility.m */; };
 		926CA2E718FC263400CD2C5A /* WAImageAboveTextButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CA2E618FC263400CD2C5A /* WAImageAboveTextButton.m */; };
 		928B89E1194714E8003E9CE5 /* WAGetDirectionsPickerLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 928B89E3194714E8003E9CE5 /* WAGetDirectionsPickerLocalizable.strings */; };
+		928B89E819471EB4003E9CE5 /* UIActionSheet+WAGetDirectionsPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 928B89E719471EB4003E9CE5 /* UIActionSheet+WAGetDirectionsPicker.m */; };
 		92E02AF21945ED780073D0B7 /* WAGetDirectionsPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E02AF11945ED780073D0B7 /* WAGetDirectionsPicker.m */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,8 @@
 		928B89E0194714D8003E9CE5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		928B89E4194714F0003E9CE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/WAGetDirectionsPickerLocalizable.strings; sourceTree = "<group>"; };
 		928B89E51947150B003E9CE5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/WAGetDirectionsPickerLocalizable.strings; sourceTree = "<group>"; };
+		928B89E619471EB4003E9CE5 /* UIActionSheet+WAGetDirectionsPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+WAGetDirectionsPicker.h"; sourceTree = "<group>"; };
+		928B89E719471EB4003E9CE5 /* UIActionSheet+WAGetDirectionsPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+WAGetDirectionsPicker.m"; sourceTree = "<group>"; };
 		92E02AF01945ED780073D0B7 /* WAGetDirectionsPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAGetDirectionsPicker.h; sourceTree = "<group>"; };
 		92E02AF11945ED780073D0B7 /* WAGetDirectionsPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAGetDirectionsPicker.m; sourceTree = "<group>"; };
 		92E02AF31945EE1E0073D0B7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -221,6 +224,8 @@
 				926CA2E618FC263400CD2C5A /* WAImageAboveTextButton.m */,
 				92E02AF01945ED780073D0B7 /* WAGetDirectionsPicker.h */,
 				92E02AF11945ED780073D0B7 /* WAGetDirectionsPicker.m */,
+				928B89E619471EB4003E9CE5 /* UIActionSheet+WAGetDirectionsPicker.h */,
+				928B89E719471EB4003E9CE5 /* UIActionSheet+WAGetDirectionsPicker.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 				9225379118F425E8001AE1B9 /* main.m in Sources */,
 				926CA2E118FC260200CD2C5A /* CALayer+WAAdditions.m in Sources */,
 				926CA2E218FC260200CD2C5A /* NSMutableArray+WAAdditions.m in Sources */,
+				928B89E819471EB4003E9CE5 /* UIActionSheet+WAGetDirectionsPicker.m in Sources */,
 				92E02AF21945ED780073D0B7 /* WAGetDirectionsPicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,10 +27,10 @@
 }
 
 - (IBAction)pickGetDirectionsProviderAction:(id)sender {
-    // should be retained
-    self.getDirectionsPicker = [WAGetDirectionsPicker new];
-    self.getDirectionsPicker.startPointCoordinates = CGPointMake(55.751667,37.617778);
-    self.getDirectionsPicker.endPointCoordinates = CGPointMake(55.819722, 37.611667);
-    [self.getDirectionsPicker showInView:self.view];
+    // can be not retained
+    WAGetDirectionsPicker *getDirectionsPicker = [WAGetDirectionsPicker new];
+    getDirectionsPicker.startPointCoordinates = CGPointMake(55.751667,37.617778);
+    getDirectionsPicker.endPointCoordinates = CGPointMake(55.819722, 37.611667);
+    [getDirectionsPicker showInView:self.view];
 }
 @end

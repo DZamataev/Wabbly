@@ -10,7 +10,6 @@
 #import "Wabbly.h"
 
 @interface WAViewController : UIViewController
-@property WAGetDirectionsPicker *getDirectionsPicker;
 - (IBAction)pickGetDirectionsProviderAction:(id)sender;
 
 @end

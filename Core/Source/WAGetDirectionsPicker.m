@@ -31,7 +31,7 @@
 
 - (void)showInView:(UIView*)view
 {
-    self.actionSheet = [[UIActionSheet alloc] initWithTitle:NSLocalizedStringFromTable(@"Choose application to get directions", @"WAGetDirectionsPickerLocalizable", nil)
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:NSLocalizedStringFromTable(@"Choose application to get directions", @"WAGetDirectionsPickerLocalizable", nil)
                                                              delegate:self
                                                     cancelButtonTitle:nil
                                                destructiveButtonTitle:nil
@@ -43,15 +43,15 @@
         NSString *localizedTitle = NSLocalizedStringFromTable(keyName, @"WAGetDirectionsPickerLocalizable", nil);
         NSURL *urlFromScheme = [NSURL URLWithString:urlScheme];
         if ([[UIApplication sharedApplication] canOpenURL:urlFromScheme]) {
-            [self.actionSheet addButtonWithTitle:localizedTitle];
+            [actionSheet addButtonWithTitle:localizedTitle];
         }
     }
     
     NSString *cancelButtonTitle = @"Cancel";
-    [self.actionSheet addButtonWithTitle:cancelButtonTitle];
-    self.actionSheet.cancelButtonIndex = [self.actionSheet numberOfButtons] - 1;
-    
-    [self.actionSheet showInView:view];
+    [actionSheet addButtonWithTitle:cancelButtonTitle];
+    actionSheet.cancelButtonIndex = [actionSheet numberOfButtons] - 1;
+    actionSheet.wa_getDirectionsPicker = self;
+    [actionSheet showInView:view];
 }
 
 - (NSString*)urlSchemeForProviderType:(WAGetDirectionsPickerProviderType)providerType
@@ -196,7 +196,19 @@
         WAGetDirectionsPickerProviderType providerType = (WAGetDirectionsPickerProviderType)[num integerValue];
         [self getDirectionsFromProviderWithType:providerType];
     }
+//    actionSheet.delegate = nil;
+//    actionSheet.wa_getDirectionsPicker = nil;
 }
 
 
+- (void)actionSheetCancel:(UIActionSheet *)actionSheet {
+//    actionSheet.delegate = nil;
+//    actionSheet.wa_getDirectionsPicker = nil;
+}
+
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
+//    actionSheet.delegate = nil;
+//    actionSheet.wa_getDirectionsPicker = nil;
+}
 @end

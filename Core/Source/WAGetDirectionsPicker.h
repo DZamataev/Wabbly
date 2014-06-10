@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "UIActionSheet+WAGetDirectionsPicker.h"
+
 typedef enum {
     WAGetDirectionsPickerProviderTypeApple,
     WAGetDirectionsPickerProviderTypeGoogle,
@@ -20,7 +22,6 @@ WAGetDirectionsPickerProviderType;
 @property CGPoint startPointCoordinates; // defaults to CGPointZero
 @property CGPoint endPointCoordinates; // defaults to CGPointZero
 @property BOOL makeARoute; // defaults to YES
-@property UIActionSheet *actionSheet;
 
 - (void)showInView:(UIView*)view;
 
