@@ -31,7 +31,8 @@
 
 - (void)showInView:(UIView*)view
 {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:NSLocalizedStringFromTable(@"Choose application to get directions", @"WAGetDirectionsPickerLocalizable", nil)
+    NSString *localizationTableName = @"WAGetDirectionsPickerLocalizable";
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:NSLocalizedStringFromTable(@"Choose application to get directions", localizationTableName, nil)
                                                              delegate:self
                                                     cancelButtonTitle:nil
                                                destructiveButtonTitle:nil
@@ -40,14 +41,14 @@
         WAGetDirectionsPickerProviderType providerType = (WAGetDirectionsPickerProviderType)[num integerValue];
         NSString *keyName = [self keyNameForProviderType:providerType];
         NSString *urlScheme = [self urlSchemeForProviderType:providerType];
-        NSString *localizedTitle = NSLocalizedStringFromTable(keyName, @"WAGetDirectionsPickerLocalizable", nil);
+        NSString *localizedTitle = NSLocalizedStringFromTable(keyName, localizationTableName, nil);
         NSURL *urlFromScheme = [NSURL URLWithString:urlScheme];
         if ([[UIApplication sharedApplication] canOpenURL:urlFromScheme]) {
             [actionSheet addButtonWithTitle:localizedTitle];
         }
     }
     
-    NSString *cancelButtonTitle = @"Cancel";
+    NSString *cancelButtonTitle = NSLocalizedStringFromTable(@"Cancel", localizationTableName, nil);
     [actionSheet addButtonWithTitle:cancelButtonTitle];
     actionSheet.cancelButtonIndex = [actionSheet numberOfButtons] - 1;
     actionSheet.wa_getDirectionsPicker = self;
