@@ -27,8 +27,10 @@
 }
 
 - (IBAction)pickGetDirectionsProviderAction:(id)sender {
-    // can be not retained
+    // can be unretained
     WAGetDirectionsPicker *getDirectionsPicker = [WAGetDirectionsPicker new];
+    getDirectionsPicker.destinationAddress = [@"улица Широкая, Москва, Россия" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    getDirectionsPicker.sourceAddress = [@"улица Пришвина, Москва, Россия" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     getDirectionsPicker.startPointCoordinates = CGPointMake(55.751667,37.617778);
     getDirectionsPicker.endPointCoordinates = CGPointMake(55.819722, 37.611667);
     [getDirectionsPicker showInView:self.view];

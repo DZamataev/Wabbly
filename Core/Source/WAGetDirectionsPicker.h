@@ -22,6 +22,8 @@ WAGetDirectionsPickerProviderType;
 @property CGPoint startPointCoordinates; // defaults to CGPointZero
 @property CGPoint endPointCoordinates; // defaults to CGPointZero
 @property BOOL makeARoute; // defaults to YES
+@property NSString *sourceAddress;
+@property NSString *destinationAddress;
 
 - (void)showInView:(UIView*)view;
 

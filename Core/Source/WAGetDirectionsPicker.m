@@ -182,17 +182,27 @@
     if (!CGPointEqualToPoint(self.endPointCoordinates, CGPointZero)) {
         [urlStr appendFormat:@"ll=%f,%f&z=12&l=map&pt=%f,%f", self.endPointCoordinates.y, self.endPointCoordinates.x, self.endPointCoordinates.y, self.endPointCoordinates.x];
     }
+
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlStr]];
 }
 
 - (void)appendStandardParametersToString:(NSMutableString*)urlStr
 {
-    if (!CGPointEqualToPoint(self.startPointCoordinates, CGPointZero)) {
+    
+    if (self.sourceAddress && self.sourceAddress.length > 0) {
+        [urlStr appendFormat:@"saddr=%@&", self.sourceAddress];
+    }
+    else if (!CGPointEqualToPoint(self.startPointCoordinates, CGPointZero)) {
         [urlStr appendFormat:@"saddr=%f,%f&", self.startPointCoordinates.x, self.startPointCoordinates.y];
     }
-    if (!CGPointEqualToPoint(self.endPointCoordinates, CGPointZero)) {
+    
+    if (self.destinationAddress && self.destinationAddress.length > 0) {
+        [urlStr appendFormat:@"daddr=%@&", self.destinationAddress];
+    }
+    else if (!CGPointEqualToPoint(self.endPointCoordinates, CGPointZero)) {
         [urlStr appendFormat:@"daddr=%f,%f&", self.endPointCoordinates.x, self.endPointCoordinates.y];
     }
+    
     if ([[urlStr substringFromIndex:urlStr.length-1] isEqualToString:@"&"]) {
         [urlStr replaceCharactersInRange:NSMakeRange(urlStr.length-1, 1) withString:@""];
     }
