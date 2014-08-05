@@ -18,12 +18,22 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self weakselfexample];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)weakselfexample {
+    self.block = @weakself(^(NSObject * obj)) {
+        NSLog(@"%@", [self description]);
+        return 0;
+    } @weakselfend;
+    
+    self.block([NSArray new]);
 }
 
 - (IBAction)pickGetDirectionsProviderAction:(id)sender {

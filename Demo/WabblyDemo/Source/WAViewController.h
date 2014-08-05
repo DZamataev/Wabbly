@@ -11,5 +11,5 @@
 
 @interface WAViewController : UIViewController
 - (IBAction)pickGetDirectionsProviderAction:(id)sender;
-
+@property (nonatomic, copy) int (^block)(NSObject * obj);
 @end

@@ -5,3 +5,4 @@
 #import "NSMutableArray+WAAdditions.h"
 #import "WAImageAboveTextButton.h"
 #import "WAGetDirectionsPicker.h"
+#import "WAweakself.h"
