@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/DZamataev/Wabbly.svg)](https://travis-ci.org/DZamataev/Wabbly)
+
 Wabbly
 ======
 
@@ -7,10 +9,5 @@ iOS SDK additions which you always need and they migrate from project to project
 Install via CocoaPods
 ====================
 ```
-# bleeding edge
-pod 'Wabbly', :git => 'https://github.com/DZamataev/Wabbly.git', :branch => 'master'
-```
-```
-# stable
-pod 'Wabbly', :git => 'https://github.com/DZamataev/Wabbly.git', :branch => 'release'
+pod 'Wabbly'
 ```

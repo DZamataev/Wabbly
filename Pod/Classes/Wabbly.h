@@ -8,3 +8,4 @@
 #import "WAweakself.h"
 #import "NSString+WAAdditions.h"
 #import "NSDate+WAAdditions.h"
+#import "UIStoryboard+WAAdditions.h"

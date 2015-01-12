@@ -1,5 +1,5 @@
 PODS:
-  - Wabbly (1.1.0)
+  - Wabbly (1.1.2)
 
 DEPENDENCIES:
   - Wabbly (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Wabbly: e85321ca3d26dbaf757f926118e5f7782a422f25
+  Wabbly: 5422c9d7b893b631016a8beaf3a6acdf675ce995
 
 COCOAPODS: 0.35.0
