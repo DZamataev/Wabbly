@@ -61,4 +61,8 @@
 //  - Adapted from http://regexlib.com/REDetails.aspx?regexp_id=96
 - (NSString *)wa_stringByLinkifyingURLs;
 
++ (BOOL)wa_isNullOrEmpty:(NSString*)s;
+
+// Unfortunately, stringByAddingPercentEscapesUsingEncoding doesn't always work 100%. It encodes non-URL characters but leaves the reserved characters (like slash / and ampersand &) alone. Apparently this is a bug that Apple is aware of, but since they have not fixed it yet, I have been using this category to url-encode a string
+- (NSString *)wa_urlencode;
 @end

@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Wabbly"
-  s.version          = "1.1.0"
+  s.version          = "1.1.1"
   s.summary          = "iOS SDK additions which you always need and they migrate from project to project. Handy categories, scripts, extensions."
   s.homepage         = "https://github.com/DZamataev/Wabbly"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
