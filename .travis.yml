@@ -2,6 +2,6 @@
 
 language: objective-c
 # podfile: Example/Podfile
-# before_install: cd Example && pod install && cd -
+before_install: cd Example && pod install && cd -
 script:
 - xctool test -workspace Example/Wabbly.xcworkspace -scheme Wabbly-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
